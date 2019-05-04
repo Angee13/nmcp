@@ -17,7 +17,7 @@ void main()
     f2=fu(x2);
     x=(x1*f2-x2*f1)/(f2-f1);
     f=fu(x);
-    while(fabs(x2-x1)>e)
+    while(fabs(f)>e)
     {
         if(f1*f<0)
         {
@@ -27,9 +27,10 @@ void main()
         {
              x1=x;
         }
-       x=(x1*f2-x2*f1)/(f2-f1);
+       
         f1=fu(x1);
         f2=fu(x2);
+        x=(x1*f2-x2*f1)/(f2-f1);
         f=fu(x);
         }
         printf("The real root is:%f",x);
